@@ -89,8 +89,8 @@ body[data-state=play] .hudOnly,body[data-state=pause] .hudOnly,body[data-state=d
 .plaque{display:inline-block;padding:2px 20px;font-size:12px;font-weight:700;letter-spacing:3px;color:#f4e2bc;text-shadow:0 1px 2px #000;background:linear-gradient(180deg,#d8a440,#7a5418);clip-path:polygon(10px 0,calc(100% - 10px) 0,100% 50%,calc(100% - 10px) 100%,10px 100%,0 50%);position:relative}
 .plaque::before{content:"";position:absolute;inset:1.5px;background:linear-gradient(180deg,#2a2018,#120d08);clip-path:polygon(9px 0,calc(100% - 9px) 0,100% 50%,calc(100% - 9px) 100%,9px 100%,0 50%);z-index:-1}
 .plaque{isolation:isolate}
-#bossWrap{position:fixed;top:calc(14px + var(--st));left:50%;transform:translateX(-50%);pointer-events:none}
-#bossBar{width:min(210px,calc(100vw - 590px));min-width:140px;height:14px;position:relative;background:#0b0806;border:2px solid #050302;box-shadow:0 0 0 1.4px #c0303a,0 0 12px rgba(255,40,60,.35)}
+#bossWrap{margin:7px 0 0 4px;pointer-events:none}
+#bossBar{width:200px;height:14px;position:relative;background:#0b0806;border:2px solid #050302;box-shadow:0 0 0 1.4px #c0303a,0 0 12px rgba(255,40,60,.35)}
 #bossBar i{position:absolute;inset:1px;transform-origin:left;background:linear-gradient(180deg,#ff6a7a,#a0102a 60%,#4a0410)}
 #bossBar span{position:absolute;inset:0;display:grid;place-items:center;font-size:10px;font-weight:700;letter-spacing:2px;color:#ffe0e0;text-shadow:0 1px 2px #000}
 #topR{position:fixed;top:calc(6px + var(--st));right:calc(10px + var(--sr));display:flex;gap:7px;align-items:flex-start}
@@ -112,7 +112,7 @@ body[data-state=play] .hudOnly,body[data-state=pause] .hudOnly,body[data-state=d
 body.pc .pcHint{display:block}body.pc .joyHint{display:none}
 body.pc #hud,body.pc #topR,body.pc #pad,body.pc #topC{zoom:var(--uiz,2)}
 body.pc #topC{top:70px}
-body.pc #bossWrap{zoom:var(--uiz,1.2)}body.pc #bossBar{width:220px}
+
 body.pc .pcHint{bottom:calc(10px + var(--sb));font-size:12px}
 /* ===== 스킬 패드: 1편 배치 — 오른쪽 아래 큰 평타, 스킬이 띠처럼 감쌈 ===== */
 #pad{position:fixed;right:calc(8px + var(--sr));bottom:calc(6px + var(--sb));width:276px;height:182px;--c:#e2b75a}
@@ -331,8 +331,7 @@ body.pc #dunSel .dpanel{zoom:var(--uiz)}
       <div class="gbar xp"><i id="xpFill"></i></div>
     </div>
   </div>
-  <div id="topC"><div class="plaque" id="floorName">슬라임 동굴 1F</div></div>
-  <div id="bossWrap"><div id="bossBar" hidden><i></i><span>☠ 킹 슬라임 ☠</span></div></div>
+  <div id="topC"><div class="plaque" id="floorName">슬라임 동굴 1F</div><div id="bossWrap"><div id="bossBar" hidden><i></i><span>☠ 킹 슬라임 ☠</span></div></div></div>
   <div id="topR">
     <div class="chips"><div class="chip"><i class="coin"></i><b id="goldTxt">0</b></div><div class="chip">처치 <b id="kills">0</b></div><span id="fps" class="chip">-- FPS</span></div>
     <div class="miniWrap"><canvas id="mini" width="256" height="256"></canvas><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="#050302" stroke-width="6"/><circle cx="50" cy="50" r="46" fill="none" stroke="url(#gIron)" stroke-width="4"/><circle cx="50" cy="50" r="43.2" fill="none" stroke="url(#gGold)" stroke-width="1.8"/><g fill="url(#gGold)" stroke="#2a1806" stroke-width=".6"><path d="M50 0 L54.5 8 L45.5 8Z"/><path d="M50 100 L54.5 92 L45.5 92Z"/><path d="M0 50 L8 45.5 L8 54.5Z"/><path d="M100 50 L92 45.5 L92 54.5Z"/></g></svg></div>
