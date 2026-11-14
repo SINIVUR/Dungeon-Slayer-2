@@ -700,6 +700,12 @@ body.pc #hud{left:50%!important;transform:none!important;margin-left:-98px}
 .elset{margin-top:6px;padding:5px 7px;background:#0e0c1c;box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--ec) 55%,#000);display:flex;flex-direction:column;gap:2px;font-size:10.5px}
 .elset b{color:var(--ec)}.elset small{color:#8a84a8;font-size:9px}.elset span{color:#6a6488}.elset span.on{color:#fff;text-shadow:0 0 6px var(--ec)}
 .ela .esn{font-style:normal;margin-left:3px;font-size:9px;color:var(--pgold)}
+/* 각성: 화면 어두워짐 제거 (글리치만 유지) */
+#awkFx .scan{display:none!important}
+#awkGlitch .sc{background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 4px)!important;mix-blend-mode:screen}
+#awkGlitch .ed{box-shadow:inset 4px 0 0 rgba(57,255,106,.45),inset -4px 0 0 rgba(255,42,74,.45)!important;mix-blend-mode:screen}
+/* 궁극기 버튼 크기 = 일반 스킬 */
+#pad .mb.ult:not(.sup):not(.awk){width:60px!important;height:60px!important;right:170px!important;bottom:104px!important}
 
 </style>
 </head>
